@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gallery</title>
+        <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <h1 class="page-title">Visual <span>Journeys</span></h1>
+    <nav class="navbar">
+    <div class="logo-container">
+    </div>
+        <nav class="navbar">
+    <div class="logo-container">
+    </div>
+    <ul class="nav-links">
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li><a href="destination.html" class="nav-link">Destination</a></li>
+        <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+        <li><a href="blog.html" class="nav-link">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+    </ul>
+</nav>
+
+  
+</nav>
+    <div class="gallery-container">
+    <div class="card">
+        <h2 class="hcard">Hong Kong</h2>
+        <img src="./hong kong.jpg" class="pic" alt="France Image">
+        <p class="pcard">Where skyscrapers embrace the clouds and city lights reflect on the harbor waters.<br> A captivating blend of Eastern heritage and Western modernity, where the vibrant energy of the "Pearl of the Orient" never sleeps.</p>
+    </div>
+    <div class="card">
+        <h2 class="hcard">Rome</h2>
+        <img src="./hongbin-7pZcntYKLO4-unsplash.jpg" class="pic" alt="Italy Image">
+        <p class="pcard">Where the echoes of an empire meet the<br> pulse of the present Beneath the Roman<br> sky, marble and memory intertwine to<br> tell a story of eternal glory As the flag<br> flutters over the sacred domes</p>
+    </div>
+        <div class="card">
+        <h2 class="hcard">Macau</h2>
+        <img src="./macau.jpg" class="pic" alt="Switzerland Image">
+        <p class="pcard">A city of striking contrasts, where classic Portuguese architecture meets the dazzling lights of modern resorts. It's<br> a destination where historic tranquility blends seamlessly with the city's ceaseless bustle.</p>
+        </div>
+        <div class="card">
+        <h2 class="hcard">Moscow</h2>
+        <img src="./russian.jpg" class="pic" alt="Iceland Image">
+        <p class="pcard">Between golden domes that tell tales of tsars and glass skyscrapers that hint at the future, Moscow is a masterpiece of Russian grandeur that sparkles in the sunlight and on enchanting winter nights.</p>
+        </div>
+        <div class="card">
+            <h2 class="hcard">Madrid</h2>
+            <img src="./Madrid (Spain).jpg" class="pic" alt="Chechen Image">
+            <p class="pcard">The beating heart of Spain, brimming with art and life. Beneath the shadows of ancient historical buildings and flags that flutter proudly, Madrid breathes culture and creativity that is evident in every corner of its wide streets.
+        </div>
+            <div class="card">
+                <h2 class="hcard">New Zealand</h2>
+                <img src="./new zlanda.jpg" class="pic" alt="Turkey Image">
+                <p class="pcard">A paradise of unspoiled nature, where snow-capped peaks meet crystal-clear lakes in perfect harmony. It is a land that offers absolute tranquility and invites you to explore untouched beauty, from sunrise to sunset.</p>
+            </div>
+        </div>
+
+        <script>document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add('fade-in');
+
+    const links = document.querySelectorAll('.nav-link, .cta-btn, .back-btn');
+    
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (this.href && !this.href.includes('#')) {
+                e.preventDefault();
+                const target = this.href;
+
+                document.body.classList.remove('fade-in');
+                document.body.classList.add('fade-out');
+
+                setTimeout(() => {
+                    window.location.href = target;
+                }, 300);
+            }
+        });
+    });
+});
+</script>
+
+</body>
+</html> 

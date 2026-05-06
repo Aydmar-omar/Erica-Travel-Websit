@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blogs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <nav class="navbar">
+        <div class="logo-container">
+            <a href="home.html"><img src="./logo.png.png" class="logo" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+        <li><a href="home.html" class="nav-link">Home</a></li>
+        <li><a href="destination.html" class="nav-link">Destination</a></li>
+        <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+        <li><a href="blog.html" class="nav-link active">Blog</a></li>
+        <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="blog-container">
+    <h1 class="page-title">Travel <span>Stories</span></h1>
+    
+    <div class="blog-grid">
+        <article class="blog-card">
+            <div class="blog-img">
+                <img src="https://img.freepik.com/free-photo/rear-view-male-female-hiker-overlooking-mountain-view_23-2148182877.jpg?semt=ais_hybrid&w=740&q=80" alt="Blog Post">
+                <span class="category">Adventure</span>
+            </div>
+            <div class="blog-info">
+                <span class="date">April 2, 2026 • 5 min read</span>
+                <h2>How to travel Europe with only a backpack</h2>
+                <p>Discover the secrets of lightweight travel and how to save on costs while navigating between European countries...</p>
+                <a href="https://www.youtube.com/watch?v=wIGEJLG1p7A" class="read-more">Read Full Story →</a>
+            </div>
+        </article>
+
+        <article class="blog-card">
+            <div class="blog-img">
+                <img src="https://img.freepik.com/premium-photo/traditional-turkish-cuisine_127425-87.jpg?semt=ais_incoming&w=740&q=80" alt="Blog Post">
+                <span class="category">Food</span>
+            </div>
+            <div class="blog-info">
+                <span class="date">March 28, 2026 • 8 min read</span>
+                <h2>Top 10 Street Foods you must try in Turkey</h2>
+                <p>From kebabs to baklava, a journey through the streets of Istanbul to discover the most delicious street dishes...</p>
+                <a href="https://www.youtube.com/watch?v=juWJMvAaTOc" class="read-more">Read Full Story →</a>
+            </div>
+        </article>
+    </div>
+</div>
+    <script>document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add('fade-in');
+
+    const links = document.querySelectorAll('.nav-link, .cta-btn, .back-btn');
+    
+    links.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (this.href && !this.href.includes('#')) {
+                e.preventDefault();
+                const target = this.href;
+
+                document.body.classList.remove('fade-in');
+                document.body.classList.add('fade-out');
+
+                setTimeout(() => {
+                    window.location.href = target;
+                }, 300);
+            }
+        });
+    });
+});</script>
+</body>
+</html>

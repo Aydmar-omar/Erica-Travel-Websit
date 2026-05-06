@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome (مهم للأيقونات) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <h1 class="page-title">Get in <span>Touch</span></h1>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <a href="home.html"><img src="./logo.png.png" class="logo" alt="Logo"></a>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="home.html" class="nav-link">Home</a></li>
+            <li><a href="destination.html" class="nav-link">Destination</a></li>
+            <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+            <li><a href="blog.html" class="nav-link">Blog</a></li>
+            <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact-wrapper">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Do you have a question or are planning your next trip? We're here to help!</p>
+            
+            <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <span>info@travelworld.com</span>
+            </div>
+
+            <div class="info-item">
+                <i class="fas fa-phone"></i>
+                <span>+962 7X XXX XXXX</span>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+                <a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+                <a href="https://whatsapp.com"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <form class="contact-form">
+            <div class="input-group">
+                <input type="text" placeholder="Your Name" required>
+            </div>
+
+            <div class="input-group">
+                <input type="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="input-group">
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="cta-btn">Send Message</button>
+        </form>
+    </div>
+
+    <div class="footer-social">
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.twitter.com/"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://www.snapchat.com/"><i class="fab fa-snapchat-ghost"></i></a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.body.classList.add('fade-in');
+
+            const links = document.querySelectorAll('.nav-link, .cta-btn, .back-btn');
+            
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    if (this.href && !this.href.includes('#')) {
+                        e.preventDefault();
+                        const target = this.href;
+
+                        document.body.classList.remove('fade-in');
+                        document.body.classList.add('fade-out');
+
+                        setTimeout(() => {
+                            window.location.href = target;
+                        }, 300);
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
